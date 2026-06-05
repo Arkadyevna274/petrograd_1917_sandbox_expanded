@@ -7,6 +7,8 @@ go-to: sandbox_menu
 
 @sandbox_menu
 
+- @clear_hand: Clear Cards
+- @make_adv_available: Make Advisors Available
 - @edit_budget: Edit the Budget
 - @edit_resources: Edit Party Resources
 - @edit_militiary: Edit the militiary
@@ -15,6 +17,27 @@ go-to: sandbox_menu
 - @edit_security: Edit Internal Security, Unrest, Crime and Militias
 - @edit_economy: Edit the Economy and Food
 - @return_home: Return to Home
+
+@clear_hand
+go-to: sandbox_menu
+on-arrival: {!
+Q.advisor_action_timer = 6;
+if (Q.difficulty >= 0) {
+    window.dendryUI.dendryEngine.state.currentHands['main'] = [];
+} else {
+    window.dendryUI.dendryEngine.state.currentHands['main.main_easy'] = [];
+}
+!}
+
+Cleared all cards.
+
+@make_adv_available
+go-to: sandbox_menu
+on-arrival: {!
+Q.advisor_action_timer = 0;
+!}
+
+Made advisor actions available
 
 @edit_budget
 
