@@ -30,8 +30,6 @@ if (Q.difficulty >= 0) {
 }
 !}
 
-Cleared all cards.
-
 @clear_hand_hard
 go-to: sandbox_menu
 on-arrival: {!
@@ -42,8 +40,6 @@ if (Q.difficulty >= 0) {
     window.dendryUI.dendryEngine.state.currentHands['main.main_hard'] = [];
 }
 !}
-
-Cleared all cards.
 
 @make_adv_available
 go-to: sandbox_menu
