@@ -8,7 +8,7 @@ go-to: sandbox_menu
 @sandbox_menu
 
 - @clear_hand: Clear Cards
-- @clear_hand_hard: Clear Cards
+- @clear_hand_hard: Clear Cards (Hard Difficulty)
 - @make_adv_available: Make Advisors Available
 - @edit_budget: Edit the Budget
 - @edit_resources: Edit Party Resources
