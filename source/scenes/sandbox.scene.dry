@@ -7,9 +7,7 @@ go-to: sandbox_menu
 
 @sandbox_menu
 
-- @clear_hand_easy: Clear Cards
-- @clear_hand_normal: Clear Cards
-- @clear_hand_hard: Clear Cards
+- @clear_hand: Clear Cards
 - @make_adv_available: Make Advisors Available
 - @edit_budget: Edit the Budget
 - @edit_resources: Edit Party Resources
@@ -20,8 +18,7 @@ go-to: sandbox_menu
 - @edit_economy: Edit the Economy and Food
 - @return_home: Return to Home
 
-@clear_hand_easy
-view-if: difficulty = -1
+@clear_hand
 go-to: sandbox_menu
 on-arrival: {!
 Q.advisor_action_timer = 6;
@@ -31,36 +28,6 @@ if (Q.difficulty >= 0) {
     window.dendryUI.dendryEngine.state.currentHands['main.main_easy'] = [];
 }
 !}
-
-Cleared all cards.
-
-@clear_hand_normal
-view-if: difficulty = 0
-go-to: sandbox_menu
-on-arrival: {!
-Q.advisor_action_timer = 6;
-if (Q.difficulty >= 0) {
-    window.dendryUI.dendryEngine.state.currentHands['main'] = [];
-} else {
-    window.dendryUI.dendryEngine.state.currentHands['main.main_normal'] = [];
-}
-!}
-
-Cleared all cards.
-
-@clear_hand_hard
-view-if: difficulty = 1
-go-to: sandbox_menu
-on-arrival: {!
-Q.advisor_action_timer = 6;
-if (Q.difficulty >= 0) {
-    window.dendryUI.dendryEngine.state.currentHands['main'] = [];
-} else {
-    window.dendryUI.dendryEngine.state.currentHands['main.main_hard'] = [];
-}
-!}
-
-Cleared all cards.
 
 @make_adv_available
 go-to: sandbox_menu
