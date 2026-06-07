@@ -8,7 +8,6 @@ go-to: sandbox_menu
 @sandbox_menu
 
 - @clear_hand: Clear Cards
-- @clear_hand_hard: Clear Cards (Hard Difficulty)
 - @make_adv_available: Make Advisors Available
 - @edit_budget: Edit the Budget
 - @edit_resources: Edit Party Resources
@@ -29,19 +28,6 @@ if (Q.difficulty >= 0) {
     window.dendryUI.dendryEngine.state.currentHands['main.main_easy'] = [];
 }
 !}
-
-
-@clear_hand_hard
-go-to: sandbox_menu
-on-arrival: {!
-Q.advisor_action_timer = 6;
-if (Q.difficulty >= 0) {
-    window.dendryUI.dendryEngine.state.currentHands['main'] = [];
-} else {
-    window.dendryUI.dendryEngine.state.currentHands['main.main_hard'] = [];
-}
-!}
-
 
 @make_adv_available
 go-to: sandbox_menu
